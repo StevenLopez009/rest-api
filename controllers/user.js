@@ -1,8 +1,6 @@
-import { response } from "express";
+import { response, request } from "express";
 
-const req = response;
-
-const usuariosGet = (req, res) => {
+const usuariosGet = (req = request, res = response) => {
   const query = req.query;
   res.json({
     msg: "get API-Controlador",
